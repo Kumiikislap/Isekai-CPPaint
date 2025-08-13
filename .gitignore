@@ -24,3 +24,6 @@ export_presets.cfg
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json
+
+build/
+.cache/
