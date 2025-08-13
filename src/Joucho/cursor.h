@@ -16,6 +16,7 @@ namespace nyo
 
     public:
         virtual void _process(double p_delta) override;
+        void _ready() override;
 
         Cursor();
         ~Cursor();

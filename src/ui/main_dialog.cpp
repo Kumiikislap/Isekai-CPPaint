@@ -8,6 +8,8 @@
 #include "util/conversions.hpp"
 #include "util/engine.hpp"
 
+#include "singletons/SGlobal.h"
+
 namespace rl::inline ui
 {
     void MainDialog::_ready()
@@ -15,7 +17,7 @@ namespace rl::inline ui
         if (engine::editor_active())
             return;
 
-        Console<godot::RichTextLabel>* game_console{ console::get() };
+        Console<godot::RichTextLabel>* game_console{ console::get() };  // instatiate console?
 
         godot::Node* root{ scene::tree::root_node(this) };
         godot::Node* label{ root->find_child(name::dialog::console, true, false) };
@@ -25,6 +27,8 @@ namespace rl::inline ui
         m_console_label = gdcast<godot::RichTextLabel>(label);
 
         game_console->set_context(m_console_label);
+
+
     }
 
     void MainDialog::_notification(int notification)
@@ -51,7 +55,12 @@ namespace rl::inline ui
             }
         }
 
+
         auto console{ console::get() };
+		// Console<godot::RichTextLabel>* sglobal { Console<godot::RichTextLabel>::get() };	
+		
+        console->print("Kumii: {}",console->data);
         console->print("notification: {}", notification);
+
     }
 }

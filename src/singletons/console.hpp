@@ -22,6 +22,8 @@ namespace rl
         GDCLASS(Console, godot::Object);
 
     public:
+		int data = 93;   // i'll just use this as singleton
+
         Console()
         {
             m_static_inst = this;
@@ -113,5 +115,5 @@ namespace rl
         static inline Console<TContext>* m_static_inst{ nullptr };
     };
 
-    using console = Console<godot::RichTextLabel>;
+    using console = Console<godot::RichTextLabel>;        // used for logging
 }
