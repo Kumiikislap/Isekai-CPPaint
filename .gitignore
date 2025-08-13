@@ -27,3 +27,6 @@ export_presets.cfg
 
 build/
 .cache/
+extern/vcpkg
+extern/godot-cpp
+extern/godot-engine
