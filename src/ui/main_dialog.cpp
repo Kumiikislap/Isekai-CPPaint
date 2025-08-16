@@ -3,12 +3,12 @@
 
 #include "core/assert.hpp"
 #include "core/constants.hpp"
+#include "godot_cpp/variant/utility_functions.hpp"
 #include "singletons/console.hpp"
+#include "singletons/sglobal.h"
 #include "ui/main_dialog.hpp"
 #include "util/conversions.hpp"
 #include "util/engine.hpp"
-
-#include "singletons/SGlobal.h"
 
 namespace rl::inline ui
 {
@@ -17,7 +17,7 @@ namespace rl::inline ui
         if (engine::editor_active())
             return;
 
-        Console<godot::RichTextLabel>* game_console{ console::get() };  // instatiate console?
+        Console<godot::RichTextLabel>* game_console{ console::get() };  // instatiante console?
 
         godot::Node* root{ scene::tree::root_node(this) };
         godot::Node* label{ root->find_child(name::dialog::console, true, false) };
@@ -27,8 +27,6 @@ namespace rl::inline ui
         m_console_label = gdcast<godot::RichTextLabel>(label);
 
         game_console->set_context(m_console_label);
-
-
     }
 
     void MainDialog::_notification(int notification)
@@ -55,12 +53,16 @@ namespace rl::inline ui
             }
         }
 
-
+        // sigletons test
         auto console{ console::get() };
-		// Console<godot::RichTextLabel>* sglobal { Console<godot::RichTextLabel>::get() };	
-		
-        console->print("Kumii: {}",console->data);
-        console->print("notification: {}", notification);
+        auto sglobal{ SGlobal::get_ins() };
 
+        // godot::UtilityFunctions::print(sglobal->data);
+
+        // sglobal->data = 12;
+
+        console->print("Kumii: {}", sglobal->data);
+        console->print("Crowe: {}", console->data);
+        console->print("notification: {}", notification);
     }
 }

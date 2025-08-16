@@ -41,7 +41,7 @@ namespace rl
             return;
 
         m_signal_timer += delta;
-        if (m_signal_timer > 1.0)
+        if (m_signal_timer > 1.0)  // cool ass timer
         {
             this->emit_signal(event::signal_example, delta);
             m_signal_timer -= 1.0;

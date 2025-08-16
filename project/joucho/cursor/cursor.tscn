@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dg4dvpcixytud"]
+
+[ext_resource type="Texture2D" uid="uid://b8tlk218tfif7" path="res://assets/joucho/animations/Amechan/ame0001.png" id="1_sau7h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rukrm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sau7h")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Cursor" type="Cursor"]
+sprite_frames = SubResource("SpriteFrames_rukrm")

@@ -48,6 +48,7 @@ namespace rl
 
         if (m_character_controller != nullptr)
         {
+            // nyo: event name , signal by class type , (object); SCallback ( this, func)
             signal<event::character_move>::connect<CharacterController>(m_character_controller) <=>
                 signal_callback(this, on_character_movement);
 

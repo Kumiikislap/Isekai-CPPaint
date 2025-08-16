@@ -35,6 +35,8 @@ namespace rl
         this->add_child(m_player);
         this->add_child(m_projectile_spawner);
 
+		// signal example, get node or make an var, 
+			// signal name, from what node is that signal (controller), callback (node, func)
         PlayerController* controller{ gdcast<PlayerController>(m_player->get_controller()) };
         if (controller != nullptr)
         {

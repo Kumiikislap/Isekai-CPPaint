@@ -19,6 +19,6 @@ namespace nyo
         void _ready() override;
 
         Cursor();
-        ~Cursor();
+        ~Cursor() = default;
     };
 }
