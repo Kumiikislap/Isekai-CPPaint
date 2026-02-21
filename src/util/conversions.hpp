@@ -38,7 +38,7 @@ namespace rl::inline utils
         TStr m_str{};
     };
 
-	// type casting?
+    // type casting?
     template <typename TOut, typename TIn>
         requires std::derived_from<std::remove_cvref_t<TIn>, godot::Object>
     constexpr inline TOut* gdcast(TIn* obj)

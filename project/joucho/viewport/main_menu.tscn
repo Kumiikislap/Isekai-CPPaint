@@ -1,0 +1,226 @@
+[gd_scene load_steps=10 format=3 uid="uid://biqnscxd04myx"]
+
+[ext_resource type="Texture2D" uid="uid://bp56soshfldhi" path="res://assets/joucho/icons/close-active.png" id="1_cbywj"]
+[ext_resource type="Theme" uid="uid://o0d88vwco2oi" path="res://assets/joucho/resources/menu_theme.tres" id="1_u8cv8"]
+[ext_resource type="Texture2D" uid="uid://clv5wc1f254xl" path="res://assets/joucho/icons/happy-end-world.png" id="3_k12k2"]
+[ext_resource type="Texture2D" uid="uid://c4fwxlcyljyar" path="res://assets/joucho/icons/pats.png" id="4_ridg3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7upk3"]
+bg_color = Color(0.545098, 0.45098, 0.670588, 0.509804)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cbywj"]
+bg_color = Color(0.519135, 0.77494, 0.698677, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.333333, 0.247059, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8cv8"]
+bg_color = Color(0.926155, 0.908543, 0.579329, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(4.33177e-07, 0.334038, 0.248574, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cbywj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k12k2"]
+bg_color = Color(0.974437, 0.971181, 0.962699, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0.333333, 0.247059, 1)
+
+[node name="Main_Menu" type="Main_Menu"]
+transparent_bg = true
+initial_position = 1
+size = Vector2i(450, 500)
+borderless = true
+transparent = true
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 8
+
+[node name="Panel" type="Panel" parent="Control/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_7upk3")
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="Control/Control/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cbywj")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Control/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Control/MarginContainer/MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="window_content" type="Control" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Topbar" type="PanelContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u8cv8")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Topbar"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Topbar/HBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_u8cv8")
+text = " Menu"
+
+[node name="VSeparator" type="VSeparator" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Topbar/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxEmpty_cbywj")
+
+[node name="TextureButton" type="TextureButton" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Topbar/HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_cbywj")
+
+[node name="Content" type="PanelContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 450)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_k12k2")
+
+[node name="Control" type="Control" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content"]
+clip_contents = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Setting" type="Button" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_u8cv8")
+text = "Setting
+"
+
+[node name="Cursor" type="Button" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("1_u8cv8")
+text = "Cursor
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Setting_tab" type="VBoxContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/MarginContainer/Setting_tab"]
+layout_mode = 2
+text = "aaaa"
+
+[node name="TextureButton" type="TextureButton" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/MarginContainer/Setting_tab"]
+layout_mode = 2
+texture_normal = ExtResource("3_k12k2")
+texture_pressed = ExtResource("4_ridg3")
+
+[node name="TabContainer" type="TabContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/MarginContainer/Setting_tab"]
+layout_mode = 2
+mouse_filter = 2
+current_tab = 0
+
+[node name="TabBar" type="TabBar" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/MarginContainer/Setting_tab/TabContainer"]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="TabBar2" type="TabBar" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/MarginContainer/Setting_tab/TabContainer"]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="MarginContainer2" type="MarginContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="Cursor_tab" type="VBoxContainer" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/MarginContainer2"]
+visible = false
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="Control/Control/MarginContainer/MarginContainer/VBoxContainer/Content/Control/VBoxContainer/MarginContainer2/Cursor_tab"]
+layout_mode = 2
+text = "bbbb"
+
+[node name="Button" type="Button" parent="."]
+z_index = 11
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.0
+offset_top = -15.5
+offset_right = 23.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+text = "aaaa"

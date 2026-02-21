@@ -234,6 +234,9 @@ endif()
 # set Build_type
 set(CMAKE_BUILD_TYPE debug)
 
+# set target operating system
+# set(CMAKE_SYSTEM_NAME Windows)
+
 # Define built .dll name:
 string(TOLOWER
     "${PROJECT_NAME}.${CMAKE_SYSTEM_NAME}.${system_bits}.${CMAKE_BUILD_TYPE}"

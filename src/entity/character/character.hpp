@@ -2,8 +2,8 @@
 
 #include <concepts>
 
-#include <godot_cpp/classes/character_body2d.hpp>
 #include <godot_cpp/classes/camera2d.hpp>
+#include <godot_cpp/classes/character_body2d.hpp>
 
 #include "core/attributes.hpp"
 #include "core/constants.hpp"
@@ -79,9 +79,9 @@ namespace rl
         double m_rotation_angle{ 0.0 };
 
         // the player character camera
-		// returns a pointer (m_camera)-> [memory address] of data of Camera
-        Camera* m_camera{ memnew(Camera) };  
-		// handles all input related player controls
+        // returns a pointer (m_camera)-> [memory address] of data of Camera
+        Camera* m_camera{ memnew(Camera) };
+        // handles all input related player controls
         CharacterController* m_character_controller{ nullptr };
         // marker identifying location where to spwwn projectiles
         godot::Marker2D* m_firing_point{ nullptr };

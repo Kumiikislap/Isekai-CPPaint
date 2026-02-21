@@ -22,15 +22,9 @@ namespace nyo
 
     void Cursor::_process(double p_delta)
     {
-        mousepos = get_global_mouse_position();
+        // mousepos = get_global_mouse_position();
 
-        set_position(mousepos - offset);
-		
-		godot::DisplayServer& DSingle = *godot::DisplayServer::get_singleton();
-
-		godot::BitField<godot::MouseButtonMask> miao  = DSingle.mouse_get_button_state();
-
-        godot::UtilityFunctions::print(miao);
-	
+        // set_position(mousepos - offset);
     }
+
 }

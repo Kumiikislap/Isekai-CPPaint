@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://de0ykyoyd7eph"]
+
+[ext_resource type="Texture2D" uid="uid://clv5wc1f254xl" path="res://assets/joucho/icons/happy-end-world.png" id="1_7cmuu"]
+[ext_resource type="Texture2D" uid="uid://c4fwxlcyljyar" path="res://assets/joucho/icons/pats.png" id="2_f1g5r"]
+
+[node name="Monitor" type="Monitor"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Toggle_Hover" type="TextureButton" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -131.0
+offset_top = -268.0
+offset_right = -67.0
+offset_bottom = -204.0
+grow_horizontal = 0
+grow_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("1_7cmuu")
+texture_pressed = ExtResource("2_f1g5r")

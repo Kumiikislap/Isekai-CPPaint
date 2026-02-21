@@ -50,7 +50,7 @@ namespace rl
 
     void Main::apply_default_settings()
     {
-        engine::set_fps(60);
+        // engine::set_fps(60);
         input::use_accumulated_inputs(false);
 
         if (not engine::editor_active())

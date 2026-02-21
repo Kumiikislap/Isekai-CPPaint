@@ -1,17 +1,66 @@
-[gd_scene load_steps=3 format=3 uid="uid://dg4dvpcixytud"]
+[gd_scene load_steps=9 format=3 uid="uid://dg4dvpcixytud"]
 
+[ext_resource type="Texture2D" uid="uid://41tq10xilpgt" path="res://assets/joucho/animations/Amechan/stream_ame_comic_000.png" id="1_iwbfg"]
 [ext_resource type="Texture2D" uid="uid://b8tlk218tfif7" path="res://assets/joucho/animations/Amechan/ame0001.png" id="1_sau7h"]
+[ext_resource type="Texture2D" uid="uid://br4nujdv6kqvg" path="res://assets/joucho/animations/Amechan/stream_ame_comic_001.png" id="2_bi85a"]
+[ext_resource type="Texture2D" uid="uid://bh0shumr8stgg" path="res://assets/joucho/animations/Amechan/ame0000.png" id="3_tgl28"]
+[ext_resource type="Texture2D" uid="uid://bp58dyrgqww78" path="res://assets/joucho/animations/Amechan/ame0002.png" id="4_on2qp"]
+[ext_resource type="Texture2D" uid="uid://djvbmj3g0h23q" path="res://assets/joucho/animations/Amechan/ame0003.png" id="6_inwpr"]
+[ext_resource type="Texture2D" uid="uid://pexr3tmar4op" path="res://assets/joucho/egui.png" id="7_bi85a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rukrm"]
 animations = [{
 "frames": [{
+"duration": 4.0,
+"texture": ExtResource("1_iwbfg")
+}, {
 "duration": 1.0,
-"texture": ExtResource("1_sau7h")
+"texture": ExtResource("2_bi85a")
+}, {
+"duration": 12.0,
+"texture": ExtResource("1_iwbfg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_bi85a")
 }],
 "loop": true,
-"name": &"default",
+"name": &"drawing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 6.0,
+"texture": ExtResource("1_sau7h")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_on2qp")
+}, {
+"duration": 6.0,
+"texture": ExtResource("1_sau7h")
+}, {
+"duration": 12.0,
+"texture": ExtResource("4_on2qp")
+}, {
+"duration": 8.0,
+"texture": ExtResource("6_inwpr")
+}, {
+"duration": 4.0,
+"texture": ExtResource("3_tgl28")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bi85a")
+}],
+"loop": true,
+"name": &"singing",
 "speed": 5.0
 }]
 
 [node name="Cursor" type="Cursor"]
 sprite_frames = SubResource("SpriteFrames_rukrm")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.103814

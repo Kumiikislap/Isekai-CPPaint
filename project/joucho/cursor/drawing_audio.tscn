@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bb0c52g20vbvi"]
+
+[ext_resource type="AudioStream" uid="uid://c6lm0v5ti7hdv" path="res://assets/joucho/sfx/draw_1.wav" id="1_5di56"]
+[ext_resource type="AudioStream" uid="uid://c8e3nyfvfauuq" path="res://assets/joucho/sfx/draw_.wav" id="2_y1h4c"]
+
+[node name="Drawing_Audio" type="Drawing_Audio"]
+
+[node name="draw_walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_5di56")
+volume_db = 8.988
+bus = &"sfx"
+
+[node name="draw_complimentary" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_y1h4c")
+volume_db = -3.832
+bus = &"sfx"

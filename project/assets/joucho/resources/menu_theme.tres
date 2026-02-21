@@ -1,0 +1,32 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://o0d88vwco2oi"]
+
+[ext_resource type="FontFile" uid="uid://y0ixp1u6otrx" path="res://assets/joucho/resources/PixeloidSans.ttf" id="1_h1gyr"]
+[ext_resource type="StyleBox" uid="uid://bpbytuapgou0" path="res://assets/joucho/resources/flat_color_panel.tres" id="2_21y2g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_21y2g"]
+
+[resource]
+Button/font_sizes/font_size = 14
+Button/fonts/font = ExtResource("1_h1gyr")
+Label/colors/font_color = Color(0.099647, 0.2444, 0.375925, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 4
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 3
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_h1gyr")
+Label/styles/normal = SubResource("StyleBoxEmpty_21y2g")
+TabBar/fonts/font = null
+TabBar/styles/tab_selected = ExtResource("2_21y2g")
+TabContainer/colors/font_selected_color = Color(0.335624, 0.371588, 0.386795, 1)
+TabContainer/font_sizes/font_size = 14
+TabContainer/styles/panel = ExtResource("2_21y2g")
+TabContainer/styles/tab_disabled = ExtResource("2_21y2g")
+TabContainer/styles/tab_focus = ExtResource("2_21y2g")
+TabContainer/styles/tab_hovered = ExtResource("2_21y2g")
+TabContainer/styles/tab_selected = ExtResource("2_21y2g")
+TabContainer/styles/tab_unselected = ExtResource("2_21y2g")
+TabContainer/styles/tabbar_background = ExtResource("2_21y2g")

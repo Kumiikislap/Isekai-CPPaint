@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqr3gt13hdnlm"]
+
+[ext_resource type="Theme" uid="uid://o0d88vwco2oi" path="res://assets/joucho/resources/menu_theme.tres" id="1_n4fiu"]
+
+[node name="Main_Menu" type="Main_Menu"]
+transparent_bg = true
+borderless = true
+always_on_top = true
+transparent = true
+
+[node name="Setting" type="Button" parent="." groups=["menu_tabs_group"]]
+unique_name_in_owner = true
+offset_left = 12.0
+offset_top = 33.0
+offset_right = 73.0
+offset_bottom = 59.0
+theme = ExtResource("1_n4fiu")
+text = "Setting
+"
+
+[node name="Cursor" type="Button" parent="." groups=["menu_tabs_group"]]
+unique_name_in_owner = true
+offset_left = 11.0
+offset_top = 4.0
+offset_right = 72.0
+offset_bottom = 30.0
+theme = ExtResource("1_n4fiu")
+text = "Cursor
+"

@@ -5,7 +5,11 @@
 #include <godot_cpp/core/memory.hpp>
 #include <godot_cpp/variant/string_name.hpp>
 
+#include "Joucho/JouMain.h"
 #include "Joucho/cursor/cursor.h"
+#include "Joucho/viewport/controlmode.h"
+#include "Joucho/viewport/menu.h"
+#include "Joucho/viewport/monitor.h"
 #include "api/extension_interface.hpp"
 #include "entity/camera.hpp"
 #include "entity/character/character.hpp"
@@ -69,7 +73,13 @@ namespace rl
         godot::ClassDB::register_class<console>();
         godot::ClassDB::register_class<SGlobal>();
 
+        godot::ClassDB::register_runtime_class<Drawing_Audio>();
         godot::ClassDB::register_runtime_class<nyo::Cursor>();
+        godot::ClassDB::register_runtime_class<ControlMode>();
+        godot::ClassDB::register_runtime_class<Monitor>();
+        godot::ClassDB::register_runtime_class<JouMain>();
+
+        godot::ClassDB::register_runtime_class<Main_Menu>();
 
         initialize_static_objects();
     }
